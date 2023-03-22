@@ -1,14 +1,30 @@
 /// East Asian Width representation
 enum EastAsianWidth {
-  ambiguous('A'),
-  fullwidth("F"),
-  halfwidth("H"),
-  narrow("Na"),
-  natural("N"),
-  wide("W");
+  ambiguous,
+  fullwidth,
+  halfwidth,
+  narrow,
+  natural,
+  wide,
+}
 
-  const EastAsianWidth(this.abbrev);
-  final String abbrev;
+extension EastAsianWidthAbbrev on EastAsianWidth {
+  String get abbrev {
+    switch (this) {
+      case EastAsianWidth.ambiguous:
+        return 'A';
+      case EastAsianWidth.fullwidth:
+        return 'F';
+      case EastAsianWidth.halfwidth:
+        return 'H';
+      case EastAsianWidth.narrow:
+        return 'NA';
+      case EastAsianWidth.natural:
+        return 'N';
+      case EastAsianWidth.wide:
+        return 'W';
+    }
+  }
 
   // Display width representation
   int get length {

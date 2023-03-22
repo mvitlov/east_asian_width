@@ -6,7 +6,7 @@ issue_tracker: https://github.com/mvitlov/east_asian_width/issues?q=is%3Aissue+i
 version: 1.0.0
 
 environment:
-  sdk: '>=2.17.0 <3.0.0'
+  sdk: '>=2.12.0 <3.0.0'
 
 dev_dependencies:
   lints: ^2.0.0
